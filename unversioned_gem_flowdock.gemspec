@@ -9,7 +9,7 @@ $LOAD_PATH.merge! [File.expand_path('../lib', __FILE__)]
 Gem::Specification.new do |spec|
   raise 'RubyGems 2.0 or newer is required.' unless spec.respond_to?(:metadata)
   spec.name = 'unversioned_gem_flowdock'
-  spec.version = '1.0.0'
+  spec.version = '1.0.1'
   spec.authors = ['Andrew Smith']
   spec.email = ['andrew.smith at moneysupermarket.com']
 

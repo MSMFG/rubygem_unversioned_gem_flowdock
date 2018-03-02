@@ -61,9 +61,10 @@ module GemFlow
 end
 
 Gem.pre_unversioned_install do |name, version|
-  next unless (flow = GemFlow.flow)
-  hostname = GemFlow.hostname
-  message = GemFlow.template.result(binding)
-  NoDepFlowdock.chat_message(flow, message, 'RubyGems', 'rubygems', 'version')
+  if (flow = GemFlow.flow)
+    hostname = GemFlow.hostname
+    message = GemFlow.template.result(binding)
+    NoDepFlowdock.chat_message(flow, message, 'RubyGems', 'rubygems', 'version')
+  end
   true
 end
